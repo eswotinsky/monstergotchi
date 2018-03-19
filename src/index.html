@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tamagotchi</title>
-  </head>
-  <body>
+<head>
+  <title>Tamagotchi</title>
+</head>
+<body>
+  <div class="container">
 
-  </body>
+    <div id="create">
+      <form id="create-form" action="index.html" method="post">
+        <label for="tamagotchi-name">Name your tamagotchi:</label>
+        <input id="enter-name" type="text" name="tamagotchi-name" value="">
+      </form>
+    </div>
+
+    <div id="display">
+
+      <h1 id="tamagotchi-name"></h1>
+
+      <p>Food: <span id="food-level">100</span></p>
+      <p>Play: <span id="play-level">100</span></p>
+      <p>Sleep: <span id="sleep-level">100</span></p>
+
+    </div>
+
+  </div>
+</body>
 </html>
