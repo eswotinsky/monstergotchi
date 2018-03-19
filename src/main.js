@@ -22,6 +22,8 @@ $(function(){
       $('#play-level').text(myTamagotchi.playLevel);
       $('#sleep-level').text(myTamagotchi.sleepLevel);
       if(myTamagotchi.isDead()){
+        $('#display').hide();
+        $('#death').show();
         clearInterval(countDown);
       }
     }, 1000);

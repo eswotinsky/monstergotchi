@@ -15,7 +15,12 @@ export class tamagotchi {
   }
 
   feed() {
-    this.foodLevel += 20;
+    if (this.foodLevel < 80) {
+      this.foodLevel += 20;
+    }
+    else {
+      this.foodLevel = 100;
+    }
   }
 
   didTamagotchiStarve() {
@@ -28,7 +33,12 @@ export class tamagotchi {
   }
 
   play() {
-    this.playLevel += 20;
+    if (this.playLevel < 80) {
+      this.playLevel += 20;
+    }
+    else {
+      this.playLevel = 100;
+    }
   }
 
   didTamagotchiDieOfBoredom() {
@@ -41,7 +51,12 @@ export class tamagotchi {
   }
 
   sleep() {
-    this.sleepLevel += 20;
+    if (this.sleepLevel < 80) {
+      this.sleepLevel += 20;
+    }
+    else {
+      this.sleepLevel = 100;
+    }
   }
 
   didTamagotchiDieOfSleepDeprivation() {
@@ -58,18 +73,3 @@ export class tamagotchi {
   }
 
 }
-// foodDecay() {
-//   setInterval(() => {
-//     this.foodLevel--
-//   }, 1000);
-// }
-// sleepDecay() {
-//   setInterval(() => {
-//     this.sleepLevel--;
-//   }, 1000)
-// }
-// playDecay() {
-//   setInterval(() => {
-//     this.playLevel--;
-//   }, 1000)
-// }
