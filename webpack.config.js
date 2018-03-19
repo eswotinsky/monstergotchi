@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const projectName = "Tamagotchi";
+const projectName = "tamagotchi";
 
 module.exports = {
   entry: './src/main.js',
@@ -19,7 +19,7 @@ module.exports = {
     new UglifyJsPlugin({sourceMap:true}),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: `${Tamagotchi}`,
+      title: `${projectName}`,
       template: './src/index.html',
       inject: 'body'
     })
