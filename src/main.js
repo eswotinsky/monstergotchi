@@ -12,16 +12,18 @@ $(function(){
 
     let name = $('#enter-name').val();
     let myTamagotchi = new tamagotchi(name);
+
     $('#tamagotchi-name').text(myTamagotchi.name);
 
     myTamagotchi.timePasses();
 
-    setInterval(function(){
-
+    let countDown = setInterval(function(){
       $('#food-level').text(myTamagotchi.foodLevel);
       $('#play-level').text(myTamagotchi.playLevel);
       $('#sleep-level').text(myTamagotchi.sleepLevel);
-
+      if(myTamagotchi.isDead()){
+        clearInterval(countDown);
+      }
     }, 1000);
 
     $('#food-button').click(function(){
