@@ -33,12 +33,12 @@ $(function(){
 
     $('#play-button').click(function(){
       myTamagotchi.play();
-      $('#food-level').text(myTamagotchi.playLevel);
+      $('#play-level').text(myTamagotchi.playLevel);
     })
 
     $('#sleep-button').click(function(){
       myTamagotchi.sleep();
-      $('#food-level').text(myTamagotchi.sleepLevel);
+      $('#sleep-level').text(myTamagotchi.sleepLevel);
     })
 
   })

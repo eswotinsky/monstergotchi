@@ -54,7 +54,7 @@ export class tamagotchi {
   }
 
   isDead() {
-    return ((this.didTamagotchiStarve()) && (this.didTamagotchiDieOfBoredom()) && (this.didTamagotchiDieOfSleepDeprivation()));
+    return ((this.didTamagotchiStarve()) || (this.didTamagotchiDieOfBoredom()) || (this.didTamagotchiDieOfSleepDeprivation()));
   }
 
 }
