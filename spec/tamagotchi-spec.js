@@ -40,4 +40,31 @@ let testTamagotchi;
     expect(testTamagotchi.didTamagotchiDieOfSleepDeprivation()).toEqual(true);
   })
 
+  it('should increase foodLevel by 20, up to a max of 100, when fed', function(){
+    testTamagotchi.timePasses();
+    jasmine.clock().tick(30001);
+    testTamagotchi.feed();
+    expect(testTamagotchi.foodLevel).toEqual(90);
+    testTamagotchi.feed();
+    expect(testTamagotchi.foodLevel).toEqual(100);
+  })
+
+  it('should increase playLevel by 20, up to a max of 100, when played with', function(){
+    testTamagotchi.timePasses();
+    jasmine.clock().tick(30001);
+    testTamagotchi.play();
+    expect(testTamagotchi.playLevel).toEqual(90);
+    testTamagotchi.play();
+    expect(testTamagotchi.playLevel).toEqual(100);
+  })
+
+  it('should increase sleepLevel by 20, up to a max of 100, when told to sleep', function(){
+    testTamagotchi.timePasses();
+    jasmine.clock().tick(30001);
+    testTamagotchi.sleep();
+    expect(testTamagotchi.sleepLevel).toEqual(90);
+    testTamagotchi.sleep();
+    expect(testTamagotchi.sleepLevel).toEqual(100);
+  })
+
 });
