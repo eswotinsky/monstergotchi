@@ -6,29 +6,35 @@
 <body>
   <div class="container">
 
+    <div class="jumbotron">
+      <h1>Tamagotchi!</h1>
+    </div>
+
     <div id="create">
       <form id="create-form" action="index.html" method="post">
         <label for="tamagotchi-name">Name your tamagotchi:</label>
         <input id="enter-name" type="text" name="tamagotchi-name" value="">
+        <button class="btn btn-primary" type="submit">Let's Get Started!</button>
       </form>
     </div>
 
     <div id="display">
 
-      <h1 id="tamagotchi-name"></h1>
+      <h3 id="tamagotchi-name"></h3>
 
-      <p>Food: <span id="food-level">100</span></p>
-      <p>Play: <span id="play-level">100</span></p>
-      <p>Sleep: <span id="sleep-level">100</span></p>
+      <p><strong>Food: </strong><span id="food-level"></span></p>
+      <p><strong>Play: </strong><span id="play-level"></span></p>
+      <p><strong>Sleep: </strong><span id="sleep-level"></span></p>
 
-      <button id="food-button" type="button" name="button">Feed</button>
-      <button id="play-button" type="button" name="button">Play</button>
-      <button id="sleep-button" type="button" name="button">Sleep</button>
+      <button id="food-button" class="btn btn-primary" type="button" name="button">Feed</button>
+      <button id="play-button" class="btn btn-primary" type="button" name="button">Play</button>
+      <button id="sleep-button" class="btn btn-primary" type="button" name="button">Sleep</button>
 
     </div>
 
     <div id="death">
       <p>Your tamagotchi died!</p>
+      <button id="reset-button" class="btn btn-primary" type="button" name="button">Reset?</button>
     </div>
 
   </div>

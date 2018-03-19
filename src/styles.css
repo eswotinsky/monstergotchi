@@ -1,7 +1,23 @@
-#display {
-  display: none;
+body {
+    background-color: lightgray;
+}
+
+.jumbotron {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #E39568
 }
 
 #death {
   display: none;
+  border-radius: 20px;
+  padding: 5%;
+  background-color: #C2C76D;
+}
+
+#display {
+  display: none;
+  border-radius: 20px;
+  padding: 5%;
+  background-color: #E8ED82;
 }

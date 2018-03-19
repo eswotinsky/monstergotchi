@@ -14,6 +14,9 @@ $(function(){
     let myTamagotchi = new tamagotchi(name);
 
     $('#tamagotchi-name').text(myTamagotchi.name);
+    $('#food-level').text(myTamagotchi.foodLevel);
+    $('#play-level').text(myTamagotchi.playLevel);
+    $('#sleep-level').text(myTamagotchi.sleepLevel);
 
     myTamagotchi.timePasses();
 
@@ -41,6 +44,11 @@ $(function(){
     $('#sleep-button').click(function(){
       myTamagotchi.sleep();
       $('#sleep-level').text(myTamagotchi.sleepLevel);
+    })
+
+    $('#reset-button').click(function(){
+      $('#death').hide();
+      $('#create').show();
     })
 
   })
