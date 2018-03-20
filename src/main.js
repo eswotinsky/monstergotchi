@@ -14,16 +14,25 @@ $(function(){
     let myTamagotchi = new tamagotchi(name);
 
     $('#tamagotchi-name').text(myTamagotchi.name);
-    $('#food-level').text(myTamagotchi.foodLevel);
-    $('#play-level').text(myTamagotchi.playLevel);
-    $('#sleep-level').text(myTamagotchi.sleepLevel);
+    $('#food-bar-title').text(myTamagotchi.foodLevel);
+    $('#play-bar-title').text(myTamagotchi.playLevel);
+    $('#sleep-bar-title').text(myTamagotchi.sleepLevel);
+
+    $('#food-bar').css('width', myTamagotchi.foodLevel + '%');
+    $('#play-bar').css('width', myTamagotchi.playLevel + '%');
+    $('#sleep-bar').css('width', myTamagotchi.sleepLevel + '%');
 
     myTamagotchi.timePasses();
 
     let countDown = setInterval(function(){
-      $('#food-level').text(myTamagotchi.foodLevel);
-      $('#play-level').text(myTamagotchi.playLevel);
-      $('#sleep-level').text(myTamagotchi.sleepLevel);
+      $('#food-bar-title').text(myTamagotchi.foodLevel);
+      $('#play-bar-title').text(myTamagotchi.playLevel);
+      $('#sleep-bar-title').text(myTamagotchi.sleepLevel);
+
+      $('#food-bar').css('width', myTamagotchi.foodLevel + '%');
+      $('#play-bar').css('width', myTamagotchi.playLevel + '%');
+      $('#sleep-bar').css('width', myTamagotchi.sleepLevel + '%');
+
       if(myTamagotchi.isDead()){
         $('#display').hide();
         $('#death').show();
@@ -33,17 +42,20 @@ $(function(){
 
     $('#food-button').click(function(){
       myTamagotchi.feed();
-      $('#food-level').text(myTamagotchi.foodLevel);
+      $('#food-bar-title').text(myTamagotchi.foodLevel);
+      $('#food-bar').css('width', myTamagotchi.foodLevel + '%');
     })
 
     $('#play-button').click(function(){
       myTamagotchi.play();
-      $('#play-level').text(myTamagotchi.playLevel);
+      $('#play-bar-title').text(myTamagotchi.playLevel);
+      $('#play-bar').css('width', myTamagotchi.playLevel + '%');
     })
 
     $('#sleep-button').click(function(){
       myTamagotchi.sleep();
-      $('#sleep-level').text(myTamagotchi.sleepLevel);
+      $('#sleep-bar-title').text(myTamagotchi.sleepLevel);
+      $('#sleep-bar').css('width', myTamagotchi.sleepLevel + '%');
     })
 
     $('#reset-button').click(function(){

@@ -5,7 +5,6 @@
 </head>
 <body>
   <div class="container">
-
     <div class="jumbotron">
       <h1>Tamagotchi!</h1>
     </div>
@@ -19,17 +18,35 @@
     </div>
 
     <div id="display">
+      <div class="row">
+        <div class="col-md-4">
+          <h3 id="tamagotchi-name"></h3>
+          <div class="progress position-relative">
+            <div id="food-bar" class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="food-bar-title" class="progress-bar-title"></div>
+          </div>
+          <hr>
+          <div class="progress position-relative">
+            <div id="play-bar" class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="play-bar-title" class="progress-bar-title"></div>
+          </div>
+          <hr>
+          <div class="progress position-relative">
+            <div id="sleep-bar" class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="sleep-bar-title" class="progress-bar-title"></div>
+          </div>
+          <hr>
+          <div id="button-control">  
+            <button id="food-button" class="btn btn-success" type="button" name="button">Feed</button>
+            <button id="play-button" class="btn btn-warning" type="button" name="button">Play</button>
+            <button id="sleep-button" class="btn btn-primary" type="button" name="button">Sleep</button>
+          </div>
+        </div>
 
-      <h3 id="tamagotchi-name"></h3>
-
-      <p><strong>Food: </strong><span id="food-level"></span></p>
-      <p><strong>Play: </strong><span id="play-level"></span></p>
-      <p><strong>Sleep: </strong><span id="sleep-level"></span></p>
-
-      <button id="food-button" class="btn btn-primary" type="button" name="button">Feed</button>
-      <button id="play-button" class="btn btn-primary" type="button" name="button">Play</button>
-      <button id="sleep-button" class="btn btn-primary" type="button" name="button">Sleep</button>
-
+        <div class="col-md-8">
+          <p>Placeholder Area</p>
+        </div>
+      </div>
     </div>
 
     <div id="death">

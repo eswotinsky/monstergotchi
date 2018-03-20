@@ -21,3 +21,23 @@ body {
   padding: 5%;
   background-color: #E8ED82;
 }
+
+.progress-bar-title {
+  position: absolute;
+  text-align: center;
+  line-height: 20px;
+  overflow: hidden;
+  color: #fff;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+#button-control {
+   display: flex;
+   justify-content: space-around;
+}
+
+#tamagotchi-name {
+  text-align: center;
+}
