@@ -7,24 +7,15 @@ import './styles.css';
 $(function(){
   $('#create-form').submit(function(event){
     event.preventDefault();
-    $('#create').hide();
-    $('#display').show();
 
     let name = $('#enter-name').val();
-    let myTamagotchi = new tamagotchi(name);
+    if(name != ""){
+      $('#create').hide();
+      $('#display').show();
 
-    $('#tamagotchi-name').text(myTamagotchi.name);
-    $('#food-bar-title').text(myTamagotchi.foodLevel);
-    $('#play-bar-title').text(myTamagotchi.playLevel);
-    $('#sleep-bar-title').text(myTamagotchi.sleepLevel);
+      let myTamagotchi = new tamagotchi(name);
 
-    $('#food-bar').css('width', myTamagotchi.foodLevel + '%');
-    $('#play-bar').css('width', myTamagotchi.playLevel + '%');
-    $('#sleep-bar').css('width', myTamagotchi.sleepLevel + '%');
-
-    myTamagotchi.timePasses();
-
-    let countDown = setInterval(function(){
+      $('#tamagotchi-name').text(myTamagotchi.name);
       $('#food-bar-title').text(myTamagotchi.foodLevel);
       $('#play-bar-title').text(myTamagotchi.playLevel);
       $('#sleep-bar-title').text(myTamagotchi.sleepLevel);
@@ -33,36 +24,47 @@ $(function(){
       $('#play-bar').css('width', myTamagotchi.playLevel + '%');
       $('#sleep-bar').css('width', myTamagotchi.sleepLevel + '%');
 
-      if(myTamagotchi.isDead()){
-        $('#display').hide();
-        $('#death').show();
-        $('#death-phrase').text(name + myTamagotchi.deathPhrase());
-        clearInterval(countDown);
-      }
-    }, 1000);
+      myTamagotchi.timePasses();
 
-    $('#food-button').click(function(){
-      myTamagotchi.feed();
-      $('#food-bar-title').text(myTamagotchi.foodLevel);
-      $('#food-bar').css('width', myTamagotchi.foodLevel + '%');
-    })
+      let countDown = setInterval(function(){
+        $('#food-bar-title').text(myTamagotchi.foodLevel);
+        $('#play-bar-title').text(myTamagotchi.playLevel);
+        $('#sleep-bar-title').text(myTamagotchi.sleepLevel);
 
-    $('#play-button').click(function(){
-      myTamagotchi.play();
-      $('#play-bar-title').text(myTamagotchi.playLevel);
-      $('#play-bar').css('width', myTamagotchi.playLevel + '%');
-    })
+        $('#food-bar').css('width', myTamagotchi.foodLevel + '%');
+        $('#play-bar').css('width', myTamagotchi.playLevel + '%');
+        $('#sleep-bar').css('width', myTamagotchi.sleepLevel + '%');
 
-    $('#sleep-button').click(function(){
-      myTamagotchi.sleep();
-      $('#sleep-bar-title').text(myTamagotchi.sleepLevel);
-      $('#sleep-bar').css('width', myTamagotchi.sleepLevel + '%');
-    })
+        if(myTamagotchi.isDead()){
+          $('#display').hide();
+          $('#death').show();
+          $('#death-phrase').text(name + myTamagotchi.deathPhrase());
+          clearInterval(countDown);
+        }
+      }, 1000);
 
-    $('#reset-button').click(function(){
-      $('#death').hide();
-      $('#create').show();
-    })
+      $('#food-button').click(function(){
+        myTamagotchi.feed();
+        $('#food-bar-title').text(myTamagotchi.foodLevel);
+        $('#food-bar').css('width', myTamagotchi.foodLevel + '%');
+      })
 
+      $('#play-button').click(function(){
+        myTamagotchi.play();
+        $('#play-bar-title').text(myTamagotchi.playLevel);
+        $('#play-bar').css('width', myTamagotchi.playLevel + '%');
+      })
+
+      $('#sleep-button').click(function(){
+        myTamagotchi.sleep();
+        $('#sleep-bar-title').text(myTamagotchi.sleepLevel);
+        $('#sleep-bar').css('width', myTamagotchi.sleepLevel + '%');
+      })
+
+      $('#reset-button').click(function(){
+        $('#death').hide();
+        $('#create').show();
+      })
+    }
   })
 });
