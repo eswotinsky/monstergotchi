@@ -41,3 +41,13 @@ body {
 #tamagotchi-name {
   text-align: center;
 }
+
+img#tamagotchi-image {
+  width: 100%;
+  height: auto;
+}
+
+img#tamagotchi-tombstone {
+  display: block;
+  margin: 0 auto;
+}

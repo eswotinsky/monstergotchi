@@ -36,7 +36,7 @@
             <div id="sleep-bar-title" class="progress-bar-title"></div>
           </div>
           <hr>
-          <div id="button-control">  
+          <div id="button-control">
             <button id="food-button" class="btn btn-success" type="button" name="button">Feed</button>
             <button id="play-button" class="btn btn-warning" type="button" name="button">Play</button>
             <button id="sleep-button" class="btn btn-primary" type="button" name="button">Sleep</button>
@@ -44,14 +44,21 @@
         </div>
 
         <div class="col-md-8">
-          <p>Placeholder Area</p>
+          <img id="tamagotchi-image" src="https://s18.postimg.org/snkqig095/oie_211633130_VAx_BNqy.gif" alt="Tamagotchi" />
         </div>
       </div>
     </div>
 
     <div id="death">
-      <p>Your tamagotchi died!</p>
-      <button id="reset-button" class="btn btn-primary" type="button" name="button">Reset?</button>
+      <div class="row">
+        <div class="col-md-4">
+          <p><span id="death-name"></span> has shuffled off this mortal coil!</p>
+          <button id="reset-button" class="btn btn-primary" type="button" name="button">Reset?</button>
+        </div>
+        <div class="col-md-8">
+          <img id="tamagotchi-tombstone" src="https://s18.postimg.org/m66fcdpgp/tombstone.png" alt="Tombstone" />
+        </div>
+      </div>
     </div>
 
   </div>
