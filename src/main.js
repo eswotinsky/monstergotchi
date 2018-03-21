@@ -36,7 +36,7 @@ $(function(){
       if(myTamagotchi.isDead()){
         $('#display').hide();
         $('#death').show();
-        $('#death-name').text(name);
+        $('#death-phrase').text(name + myTamagotchi.deathPhrase());
         clearInterval(countDown);
       }
     }, 1000);

@@ -72,4 +72,20 @@ export class tamagotchi {
     return ((this.didTamagotchiStarve()) || (this.didTamagotchiDieOfBoredom()) || (this.didTamagotchiDieOfSleepDeprivation()));
   }
 
+  deathPhrase() {
+    const deathPhrases = [
+      " has bought the farm.",
+      " has gone to a better place.",
+      " has kicked the bucket.",
+      " has met their maker.",
+      " has shuffled off this mortal coil.",
+      " is food for worms.",
+      " is pushing up daisies.",
+      " is six feet under.",
+      " sleeps with the fishes."
+    ];
+    let phrase = deathPhrases[Math.floor(Math.random() * deathPhrases.length)];
+    return phrase;
+  }
+
 }
